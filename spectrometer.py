@@ -143,6 +143,7 @@ def take_picture(name, shutter):
         print("capturing image")
         camera.capture(name, resize=(1296, 972))
     finally:
+        camera.framerate = 1
     	camera.close()
     return name
 
